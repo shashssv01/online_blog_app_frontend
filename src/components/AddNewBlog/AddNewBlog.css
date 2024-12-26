@@ -1,0 +1,78 @@
+/* Container for the Add New Blog form */
+.add-blog-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title of the form */
+.add-blog-container h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* General styles for form elements */
+.add-blog-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+.add-blog-container label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styles */
+.add-blog-container input,
+.add-blog-container textarea {
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-blog-container textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Input and textarea focus styles */
+.add-blog-container input:focus,
+.add-blog-container textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styles */
+.add-blog-container button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-blog-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Alert message styles */
+.add-blog-container .alert {
+    color: red;
+    font-size: 0.9em;
+}

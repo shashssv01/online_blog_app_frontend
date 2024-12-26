@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Root directory for source files
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+
+//outDir: Specifies the folder where compiled JavaScript files should go (e.g., dist).
+//rootDir: Ensures only files inside the src folder are compiled.

@@ -1,0 +1,32 @@
+
+.Navbar {
+    background-color:#000000;
+    padding: 1rem; /* Add some padding around the navbar */
+}
+
+.nav-ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center items horizontally */
+}
+
+.nav-ul li {
+    margin: 0 1rem; /* Add spacing between list items */
+}
+
+.nav-ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text for links */
+    font-size: 1rem; /* Set font size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-ul li a:hover {
+    color: #00bcd4; /* Highlight color on hover */
+}
+
+.nav-ul li a:active {
+    color: #ff5722; /* Active state color */
+}

@@ -1,0 +1,39 @@
+/* General styles for the blog post container */
+.blogpost-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Style for the blog post title */
+.blogpost-container h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style for the author and date */
+.blogpost-container p:first-of-type {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Style for the blog post content */
+.blogpost-container p:not(:first-of-type) {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Add a hover effect for the container */
+.blogpost-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}

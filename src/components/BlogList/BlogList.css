@@ -1,0 +1,51 @@
+/* General styles for the BlogList component */
+.bloglist-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each blog post container */
+.bloglist-div > div {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Add hover effect for each blog post */
+.bloglist-div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for blog post title */
+.bloglist-div h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+/* Style for blog post author */
+.bloglist-div p {
+    font-size: 1em;
+    color: #666;
+    margin: 8px 0;
+}
+
+/* Style for the "Read more" link */
+.bloglist-div a {
+    font-size: 1em;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bloglist-div a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#000000;
+    padding: 1rem 2rem; /* Add some padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Allow the logo section to take up available space */
+}
+
+.logo h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Adjust font size */
+    color: #ffffff; /* Dark text color */
+}
+
+.searchbar {
+    flex: 1; /* Allow search bar to take up available space */
+    display: flex;
+    justify-content: flex-start; /* Align search bar to the left */
+}
+
+.Navbar {
+    display: flex;
+    flex: 1; /* Allow Navbar to take up available space */
+    justify-content: flex-end; /* Align Navbar items to the right */
+}

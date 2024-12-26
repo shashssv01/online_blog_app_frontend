@@ -1,0 +1,39 @@
+
+### **Afternoon (1:30 PM - 4:30 PM): Core Features**
+5. **Design and Implement the Home Page (1:30 - 3:00 PM)**
+   - Create the `HomePage`:
+     - Display a list of dummy blog posts.
+     - File: `pages/HomePage.tsx`.
+   - Add a `BlogList` component to map and display blog post previews.
+
+6. **Build the Blog Post Component (3:00 - 4:30 PM)**
+   - Create `BlogPost` to render individual blog details.
+     - Props: `title`, `content`, `author`, `date`.
+   - File: `components/BlogPost/BlogPost.tsx`.
+
+---
+
+### **Evening (5:00 PM - 8:00 PM): Enhance and Polish**
+7. **Create the Blog Details Page (5:00 - 6:00 PM)**
+   - Add a `BlogPage` that renders a single blog post.
+   - Use React Router to navigate to this page with a blog post ID.
+
+8. **Add a Search Bar (6:00 - 7:00 PM)**
+   - Implement a basic search bar in the `HomePage`.
+   - Filter blog posts based on the search query.
+
+9. **Polish with Styling (7:00 - 8:00 PM)**
+   - Add basic styles using CSS Modules.
+   - Focus on responsiveness and usability.
+
+---
+
+### **Optional (8:00 PM - 9:00 PM): Deploy**
+- Deploy the app on a platform like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/):
+  ```bash
+  npm run build
+  ```
+
+---
+
+By the end of the day, you should have a working blog front-end application with a home page, routing, and basic functionality! Let me know if you need help with any specific step.

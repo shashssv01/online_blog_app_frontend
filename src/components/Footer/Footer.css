@@ -1,0 +1,45 @@
+footer {
+    background-color: black;
+    color: #fff; /* White text color */
+    text-align: center; /* Center align all content */
+}
+
+.footerblog {
+    
+    margin: 0 auto; /* Center align content horizontally */
+    padding: 0 20px; /* Add padding for small screens */
+    margin-top: auto; /* Push the footer to the bottom */
+    padding: 20px 0; /* Padding for top and bottom */
+
+
+}
+
+.footerblog p {
+    margin: 0 0 10px; /* Add some space below the copyright text */
+    font-size: 14px; /* Font size for the copyright text */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+.footer-ul {
+    list-style: none; /* Remove bullets from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center align the list items */
+    gap: 15px; /* Add spacing between list items */
+}
+
+.footer-ul li {
+    display: inline; /* Ensure list items are displayed inline */
+}
+
+.footer-ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for the links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-ul li a:hover {
+    color: #00aced; /* Change color on hover (e.g., Twitter blue) */
+}

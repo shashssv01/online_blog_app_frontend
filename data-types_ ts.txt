@@ -1,0 +1,209 @@
+TypeScript and React together offer a robust type system for developing type-safe applications. Below are the **data types** available in TypeScript and their usage in React applications:
+
+---
+
+## **Data Types in TypeScript**
+
+### **1. Primitive Types**
+- **`string`**: Text values (e.g., `"hello"`, `'world'`).
+- **`number`**: Numeric values (e.g., `42`, `3.14`).
+- **`boolean`**: True/false values.
+- **`bigint`**: For very large integers (e.g., `123n`).
+- **`symbol`**: Unique identifiers.
+- **`null`**: Represents a null value.
+- **`undefined`**: Represents an uninitialized or absent value.
+
+---
+
+### **2. Special Types**
+- **`any`**: Opt-out of type checking; can be of any type.
+- **`unknown`**: Safer alternative to `any` when type is not known.
+- **`void`**: Represents no return value (e.g., functions returning nothing).
+- **`never`**: Represents values that never occur (e.g., functions that throw errors).
+
+---
+
+### **3. Object Types**
+- **`object`**: Represents non-primitive types like arrays or functions.
+
+---
+
+### **4. Array Types**
+- **Fixed Type Arrays**: `number[]`, `string[]`.
+- **Generic Array Types**: `Array<number>`.
+- **Tuple**: Fixed-length arrays with specific types for each element (e.g., `[string, number]`).
+
+---
+
+### **5. Union and Intersection Types**
+- **Union (`|`)**: A value can be one of multiple types (e.g., `string | number`).
+- **Intersection (`&`)**: Combines multiple types into one (e.g., `{ name: string } & { age: number }`).
+
+---
+
+### **6. Literal Types**
+- **String Literals**: `"hello"`.
+- **Numeric Literals**: `42`.
+- **Boolean Literals**: `true` or `false`.
+
+---
+
+### **7. Type Aliases**
+- Define reusable types:
+```typescript
+type ID = string | number;
+```
+
+---
+
+### **8. Enums**
+Defines a set of named constants:
+```typescript
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+```
+
+---
+
+### **9. Utility Types**
+Predefined helpers:
+- **`Partial<T>`**: Makes all properties optional.
+- **`Required<T>`**: Makes all properties required.
+- **`Readonly<T>`**: Makes all properties read-only.
+- **`Pick<T, K>`**: Selects specific properties from a type.
+- **`Omit<T, K>`**: Excludes specific properties from a type.
+- **`Record<K, T>`**: Creates a type with keys `K` and values `T`.
+
+---
+
+### **10. Function Types**
+- Define the parameter and return types:
+```typescript
+const add: (a: number, b: number) => number = (a, b) => a + b;
+```
+
+---
+
+### **11. Classes**
+Object-oriented types:
+```typescript
+class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+```
+
+---
+
+### **12. Conditional and Mapped Types**
+- **Conditional**: Types based on conditions:
+```typescript
+type IsString<T> = T extends string ? true : false;
+```
+- **Mapped**: Transform properties dynamically:
+```typescript
+type Optional<T> = {
+  [K in keyof T]?: T[K];
+};
+```
+
+---
+
+## **React-Specific Types in TypeScript**
+
+### **1. React Component Props**
+Props are often strongly typed using TypeScript interfaces or types:
+```typescript
+interface Props {
+  title: string;
+  count: number;
+  isActive: boolean;
+}
+const MyComponent: React.FC<Props> = ({ title, count, isActive }) => {
+  return <div>{title}</div>;
+};
+```
+
+### **2. React State**
+State is typed when using hooks like `useState`:
+```typescript
+const [count, setCount] = React.useState<number>(0);
+```
+
+---
+
+### **3. React Events**
+Commonly typed event handlers:
+- **Mouse Events**: `React.MouseEvent<HTMLButtonElement>`
+- **Keyboard Events**: `React.KeyboardEvent<HTMLInputElement>`
+- **Form Events**: `React.FormEvent<HTMLFormElement>`
+- **Change Events**: `React.ChangeEvent<HTMLInputElement>`
+
+Example:
+```typescript
+const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  console.log(event.target);
+};
+```
+
+---
+
+### **4. React Refs**
+Typed with `React.RefObject`:
+```typescript
+const inputRef = React.useRef<HTMLInputElement>(null);
+```
+
+---
+
+### **5. Default Props and Optional Props**
+Optional props are handled using TypeScript's `?`:
+```typescript
+interface Props {
+  title: string;
+  description?: string;
+}
+```
+
+---
+
+### **6. React Context**
+Type context values:
+```typescript
+interface User {
+  id: string;
+  name: string;
+}
+const UserContext = React.createContext<User | null>(null);
+```
+
+---
+
+### **7. React Higher-Order Components (HOCs)**
+Typing for HOCs:
+```typescript
+function withTitle<P extends { title: string }>(
+  Component: React.ComponentType<P>
+) {
+  return (props: P) => <Component {...props} />;
+}
+```
+
+---
+
+### **8. React Children**
+- Use `React.ReactNode` for child components:
+```typescript
+interface Props {
+  children: React.ReactNode;
+}
+```
+
+---
+
+By combining TypeScript's strong type system with React's component-based architecture, you can create scalable, type-safe, and maintainable applications.
