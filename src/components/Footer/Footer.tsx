@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
                 &copy; {new Date().getFullYear()} Your Company. All rights reserved.
             </p>
             <ul className="footer-ul">
-                <li><a href="www.facebook.com">Facebook</a></li>
-                <li><a href="www.twitter.com" >Twitter</a></li>
-                <li><a href="www.instagram.com" >Instagram</a></li>
-                <li><a href="www.linkedin.com" >LinkedIn</a></li>
+                <li><a href="/">Facebook</a></li>
+                <li><a href="/" >Twitter</a></li>
+                <li><a href="/" >Instagram</a></li>
+                <li><a href="/" >LinkedIn</a></li>
             </ul>
     </footer>);
 };

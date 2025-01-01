@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar.tsx';
-import Searchbar from '../SearchBar/Searchbar.tsx';
+import Navbar from '../Navbar/Navbar';
+import Searchbar from '../SearchBar/Searchbar';
 import './Header.css';
 
 

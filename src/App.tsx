@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header.tsx';
-import Footer from './components/Footer/Footer.tsx';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage.tsx';
-import AboutPage from './pages/AboutPage.tsx';
-import AddNewBlog from './components/AddNewBlog/AddNewBlog.tsx';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import AddNewBlog from './components/AddNewBlog/AddNewBlog';
+import Login from 'components/Login/Login';
+import Signup from 'components/SignUp/SignUp';
+// import { PrivateRoute } from './routes/PrivateRoute';
+// import { PublicRoute } from './routes/PublicRoute';
 
 // import HomePage from './pages/HomePage';
 // import AboutPage from './pages/AboutPage';
@@ -19,6 +23,9 @@ const App : React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/addblog" element={<AddNewBlog />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/create-blog" element={<AddNewBlog />} />
       </Routes>
       <Footer />
     </div>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getBlogs } from "../../services/api.ts";
-import { Blog } from "../../models/Blog.ts";
+import { getBlogs } from "../../services/api";
+import { Blog } from "../../models/Blog";
 import "./BlogList.css";
-import Loading from "../Loading/Loading.tsx";
+import Loading from "../Loading/Loading";
 
 const BlogList: React.FC = () => {
   const [posts, setPosts] = useState<Blog[]>([]);

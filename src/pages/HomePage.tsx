@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogList from '../components/BlogList/BlogList.tsx';
+import BlogList from '../components/BlogList/BlogList';
 
 const HomePage : React.FC = () =>{
     return(

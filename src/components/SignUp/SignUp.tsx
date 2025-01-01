@@ -19,7 +19,7 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className= "signup-form" onSubmit={handleSubmit}>
       <h2>Signup</h2>
       <label>
         Username:

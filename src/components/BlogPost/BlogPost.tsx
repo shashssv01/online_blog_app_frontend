@@ -1,5 +1,5 @@
 import React from "react";
-import { Blog } from '../../models/Blog.ts';
+import { Blog } from '../../models/Blog';
 import './BlogPost.css';
 
 

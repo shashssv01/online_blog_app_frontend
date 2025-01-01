@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {Blog} from '../models/Blog.ts';
+import {Blog} from '../models/Blog';
 
 
 const api = axios.create({
