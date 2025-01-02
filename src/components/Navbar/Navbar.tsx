@@ -11,9 +11,6 @@ const Navbar : React.FC = () =>{
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
                         <Link to="/create-blog" >Create Blog</Link>
                     </li>
                     <li>

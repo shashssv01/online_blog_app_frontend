@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 import './Login.css';
 
 
@@ -46,6 +48,9 @@ const Login: React.FC = () => {
                   onChange={(e) => setPassword(e.target.value)}
               />
           </label>
+          <ul className="signup-link-ul">
+            <li className="signup-link-li"><Link to='/signup'> Proceed for Signup</Link></li>
+          </ul>
           <button type="submit">Login</button>
       </form>
   );

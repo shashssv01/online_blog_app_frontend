@@ -6,6 +6,10 @@ const AddNewBlog: React.FC = () => {
         title: '',
         content: '',
     });
+    const [error , setError] = useState<{title: string; content: string}>({
+        title: '',
+        content: '',
+    });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -17,18 +21,39 @@ const AddNewBlog: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const { title, content } = formData;
-        if (title && content) {
-            handleBlogSubmit(title, content);
-            setFormData({ title: '', content: '' });
-        } else {
-            alert('Both title and content are required!');
+        const validateErrors = validateForm();
+        if(validateErrors.title === "Title is required" && validateErrors.content === "Content is required")
+            {
+            setError(validateErrors);
+        }
+        else{
+            //Completed form submission
+            alert("Form submitted successfully!");
+            setFormData({
+                title : '',
+                content: ''
+            });
+            setError({
+                title: '',
+                content: '',
+            });
         }
     };
 
-    const handleBlogSubmit = (title: string, content: string) => {
-        console.log('New Blog Added:', { title, content });
-    };
+    const validateForm = () => {
+        let errors= {title:'',
+            content: ''
+        };
+        if(!formData.title.trim()){
+            errors.title = "Title is required";
+        }
+        if(!formData.content.trim()){
+            errors.content = "Content is required";
+        }
+        return errors;
+        }
+    
+
 
     return (
         <div className="add-blog-container">
@@ -42,20 +67,22 @@ const AddNewBlog: React.FC = () => {
                         name="title"
                         value={formData.title}
                         onChange={handleChange}
-                        required
                     />
+                    {error.title && <span style={ {color :"red"}}> {error.title} </span>}
                 </div>
                 <div>
                     <label htmlFor="content">Content:</label>
                     <textarea
                         id="content"
-                        name="content"
+                        name='content'
                         value={formData.content}
                         onChange={handleChange}
-                        required
                     ></textarea>
+                    {error.content && <span style={ {color :"red"}}> {error.content} </span>}
+
                 </div>
-                <button type="submit">Add Blog</button>
+               
+                <button type="submit">Submit Blog</button>
             </form>
         </div>
     );

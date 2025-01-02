@@ -1,4 +1,11 @@
 .App{
     min-height: 300px; /* Ensure the container covers the entire viewport height */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.central-element {
+    width: 100%;
+    flex-grow: 1;
 }

@@ -33,4 +33,3 @@ const Searchbar: React.FC = () =>{
 export default Searchbar;
 
 
-// need to have icon for the 
