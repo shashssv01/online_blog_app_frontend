@@ -10,23 +10,23 @@
 .logo {
     display: flex;
     align-items: center;
-    flex: 1; /* Allow the logo section to take up available space */
+    flex: 1; 
 }
 
 .logo h2 {
-    margin: 0; /* Remove default margin */
-    font-size: 1.5rem; /* Adjust font size */
-    color: #ffffff; /* Dark text color */
+    margin: 0; 
+    font-size: 1.5rem; 
+    color: #ffffff; 
 }
 
 .searchbar {
-    flex: 1; /* Allow search bar to take up available space */
+    flex: 1; 
     display: flex;
-    justify-content: flex-start; /* Align search bar to the left */
+    justify-content: flex-start; 
 }
 
 .Navbar {
     display: flex;
-    flex: 1; /* Allow Navbar to take up available space */
-    justify-content: flex-end; /* Align Navbar items to the right */
+    flex: 1; 
+    justify-content: flex-end; 
 }
